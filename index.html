@@ -20,136 +20,80 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>
-					Beautiful presentations
-				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
+				<h1>Реляционная алгебра</h1>
+				<img data-type="qrcode" alt="https://github.com/ktkv-presentations/db-4">
 			</section>
 			<section>
 				<section>
-					<h1>Tailwind CSS</h1>
-					<div class="grid grid-cols-2 gap-8">
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-					</div>
+					<h1>Реляционная алгебра</h1>
+					<p>формальная система для описания операций над отношениями (таблицами), которая используется для манипуляции
+						и управления данными в реляционных базах данных</p>
 				</section>
 				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-					</div>
+					<h1>Операции реляционной алгебры как способ манипулирования данными</h1>
+					<h4>операции реляционной алгебры позволяют</h4>
+					<ul>
+						<li>Извлечение данных (выборка, проекция)</li>
+						<li>Объединение данных из разных таблиц (соединение, декартово произведение)</li>
+						<li>Модификация данных (пересечение, разность, объединение)</li>
+					</ul>
 				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
-					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+				<section>
+					<h1>Основные операции реляционной алгебры</h1>
+					<h2>Объединение (Union)</h2>
+					<p>позволяет объединить два отношения (таблицы), которые имеют одинаковую структуру (то есть, одинаковый набор
+						и порядок атрибутов)</p>
+					<h4>Условие выполнение</h4>
+					<p>оба отношения должны иметь одинаковый набор атрибутов, иначе объединение невозможно</p>
+					<pre><code class="plaintext">
+Таблица A: {1, 2, 3}
+Таблица B: {3, 4, 5}
+Результат объединения (A ∪ B): {1, 2, 3, 4, 5}
 					</code></pre>
 				</section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+				<section>
+					<h1>Основные операции реляционной алгебры</h1>
+					<h2>Пересечение (Intersection)</h2>
+					<p>Операция пересечения возвращает строки, которые содержатся в обоих отношениях. Только те строки, которые существуют в обоих наборах данных, попадут в результат</p>
+					<pre><code class="plaintext">
+Таблица A: {1, 2, 3}
+Таблица B: {2, 3, 4}
+Результат пересечения (A ∩ B): {2, 3}
+					</code></pre>
 				</section>
-			</section>
-			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
-			</section>
-			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
-			</section>
-			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section>
+					<h1>Основные операции реляционной алгебры</h1>
+					<h2>Разность (Difference)</h2>
+					<p>Операция разности возвращает строки, которые находятся в первом отношении, но отсутствуют во втором</p>
+					<pre><code class="plaintext">
+Таблица A: {1, 2, 3}
+Таблица B: {2, 3, 4}
+Результат разности (A - B): {1}
+Результат разности (B - A): {4}
+					</code></pre>
+				</section>
+				<section>
+					<h1>Основные операции реляционной алгебры</h1>
+					<h2>Проекция (Projection)</h2>
+					<p>используется для того, чтобы выбрать определенные столбцы (атрибуты) из отношения, исключая остальные</p>
+					<pre><code class="plaintext">
+Таблица "Студенты" содержит следующие атрибуты: {ID, Имя, Возраст, Курс}
+Если нам нужно только имя и курс студентов, мы можем выполнить проекцию на эти атрибуты:
+
+Результат: {Имя, Курс}
+					</code></pre>
+				</section>
+				<section>
+					<h1>Основные операции реляционной алгебры</h1>
+					<h2>Выборка (Selection)</h2>
+					<p>Операция выборки (селекции) позволяет выбрать только те строки из отношения, которые соответствуют заданному условию</p>
+					<pre><code class="plaintext">
+Таблица "Студенты" содержит следующие атрибуты: {ID, Имя, Возраст, Курс}
+Если нужно найти всех студентов старше 20 лет, можно применить выборку по условию "Возраст > 20":
+
+Результат: Строки, где возраст студентов больше 20.
+					</code></pre>
+				</section>
 			</section>
 		</div>
 	</div>
@@ -172,22 +116,22 @@ var foo = {
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
-		
+
 		const colors = {
-    blue0: 'rgb(61, 89, 161)',
-    blue: 'rgb(122, 162, 247)',
-    cyan: 'rgb(125, 207, 255)',
-    magenta: 'rgb(187, 154, 247)',
-    orange: 'rgb(255, 158, 100)',
-    yellow: 'rgb(224, 175, 104)',
-    green: 'rgb(158, 206, 106)',
-    teal: 'rgb(26, 188, 156)',
-    red: 'rgb(255, 117, 127)',
-    red1: 'rgb(219, 75, 75)',
-    fg: 'rgb(192, 202, 245)',
-    bg: 'rgb(26, 27, 38)',
-		transparent: "#00000000"
-};
+			blue0: 'rgb(61, 89, 161)',
+			blue: 'rgb(122, 162, 247)',
+			cyan: 'rgb(125, 207, 255)',
+			magenta: 'rgb(187, 154, 247)',
+			orange: 'rgb(255, 158, 100)',
+			yellow: 'rgb(224, 175, 104)',
+			green: 'rgb(158, 206, 106)',
+			teal: 'rgb(26, 188, 156)',
+			red: 'rgb(255, 117, 127)',
+			red1: 'rgb(219, 75, 75)',
+			fg: 'rgb(192, 202, 245)',
+			bg: 'rgb(26, 27, 38)',
+			transparent: "#00000000"
+		};
 
 		Reveal.initialize({
 			hash: true,
